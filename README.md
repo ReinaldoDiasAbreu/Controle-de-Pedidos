@@ -6,6 +6,9 @@
 
 Desenvolver uma página online que realize o básico da gerência de um restaurante, no caso por exemplo, uma pizzaria. Utilizando das melhores tecnologias para alcançar esse objetivo.
 
+![Painel](/screenshots/painel.png)
+
+
 ### - Funcionalidades
 
   * Gerência de Funcionários
