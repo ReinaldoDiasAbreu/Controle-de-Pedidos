@@ -8,19 +8,19 @@ Desenvolver uma página online que realize o básico da gerência de um restaura
 
 ### - Funcionalidades
 
-  - [x] Gerência de Funcionários
-  - [x] Gerência de Produtos
-  - [x] Gerência de Clientes
-  - [x] Gerência de Pedidos
+  * Gerência de Funcionários
+  * Gerência de Produtos
+  * Gerência de Clientes
+  * Gerência de Pedidos
 
 ---
 ### - Tecnologias Utilizadas
 
-- [x] HTML5
-- [x] CSS3
-- [x] JS
-- [x] PHP7
-- [x] MYSQL5
-- [x] Foundation Framework 6
+* HTML5
+* CSS3
+* JS
+* PHP7
+* MYSQL5
+* Foundation Framework 6
 
 ---
