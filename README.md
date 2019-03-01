@@ -4,7 +4,7 @@
 ---
 ### - Objetivos do Projeto
 
-Desenvolver uma página online que realize o básico da gerência de um restaurante, no caso por exemplo, uma pizzaria. Utilizando das melhores tecnologias para alcançar esse objetivo.
+Desenvolver uma página online responsiva que realize o básico da gerência de um restaurante, no caso por exemplo, uma pizzaria. Utilizando das melhores tecnologias para alcançar esse objetivo.
 
 ![Painel](/screenshots/painel.png)
 
