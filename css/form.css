@@ -1,0 +1,53 @@
+h2.form-cad{
+	font-family: Roboto;
+	font-size: 17pt;
+	text-align: center;
+	font-weight: bolder;
+	display: inline-block;
+}
+input#btn-cad{
+	margin: 10px;
+	padding: 10px;
+	margin-left: 80%;
+}
+p{
+	margin: 0px;
+	padding: 0px;
+}
+a#btn-voltar{
+	border-radius: 5px;
+}
+form.form-cad{
+	border: 3px solid #666666;
+	padding: 10px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+form.form-cad p{
+	font-family: Roboto;
+	font-size: 15pt;
+}
+form.form-cad input{
+	border-radius: 5px;
+	margin: 0px;
+	font-family: Roboto;
+	font-size: 15pt;
+}
+form.form-cad label{
+	font-family: Roboto;
+	font-size: 15pt;
+}
+form.form-cad fieldset input{
+	margin-left: 20px;
+}
+form.form-cad fieldset{
+	border: 1px solid #666666;
+	border-radius: 5px;
+}
+form.form-cad legend{
+	font-family: Roboto;
+	font-size: 15pt;
+	margin: 15px;
+	padding: 5px;
+
+}

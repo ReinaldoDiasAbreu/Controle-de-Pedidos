@@ -1,0 +1,75 @@
+@font-face {
+    font-family: Roboto;
+    src: url(Roboto.ttf)
+}
+body.page-painel
+{
+	background-color: #ffffff;
+	/*#4ABDAC  #C0B283  #A239CA*/
+}
+
+div#conf fieldset
+{
+	border: 2px solid black;
+	border-radius: 10px;
+}
+div#conf fieldset legend
+{
+	padding: 5px;
+	font-family: Roboto;
+	font-size: 14pt;
+	text-align: center;
+	font-weight: bolder;
+}
+div#conf fieldset p
+{
+	text-align: center;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+div#conf fieldset a
+{
+	width: 100%;
+	border-radius: 5px;
+}
+div#conf fieldset img
+{
+	margin-left: 100%;
+	margin-top: 50%;
+}
+
+div#cabecalho{
+	margin-top: 10px;
+}
+div#cabecalho h1{
+	font-family: Roboto;
+	font-size: 20pt;
+	font-weight: bolder;
+	display: inline-block;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+div#cabecalho p{
+	font-family: Roboto;
+	font-size: 12pt;
+	color: green;
+	margin: 0px;
+	padding: 0px;
+}
+div#cabecalho span{
+	font-family: Roboto;
+	font-size: 14pt;
+	font-weight: bolder;
+	color: black;
+}
+div#cabecalho a{
+	display: block;
+	float: right;
+	margin-top: 4%;
+	border-radius: 5px;
+}
+div#usuario{
+	display: inline-block;
+}

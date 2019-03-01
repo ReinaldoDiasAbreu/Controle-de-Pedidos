@@ -1,0 +1,42 @@
+@font-face {
+    font-family: Roboto;
+    src: url(Roboto.ttf)
+}
+body.page-main
+{
+	background-image: url("../img/backgroundpizza.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+div#form-login
+{
+	margin-top: 10%;
+	background-color: #bbc8d0;
+	border-radius: 10px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+div#form-login h1
+{
+	font-family: Roboto;
+	font-size: 30pt;
+	text-align: center;
+}
+div#form-login label
+{
+	font-family: Roboto;
+	font-size: 12pt;
+}
+div#form-login input
+{
+	border-radius: 10px;
+}
+p#copyright
+{
+	text-align: right;
+	font-family: Roboto;
+	font-size: 12pt;
+	color: #ffffff;
+	text-align: center;
+}

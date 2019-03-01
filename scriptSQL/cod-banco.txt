@@ -1,0 +1,16 @@
+
+create database pizzaria
+default character set utf8
+default collate utf8_general_ci;
+
+
+create table admin(
+	id int NOT NULL AUTO_INCREMENT,
+	email varchar(30) NOT NULL,
+	nome varchar(50) NOT NULL,
+	senha varchar(15) NOT NULL,
+	cargo INT NOT NULL,
+	PRIMARY KEY (id)
+) default charset = utf8;
+
+INSERT INTO admin (email, nome, senha, cargo) VALUES ('admin@admin.com', 'admin', 'admin', 1);
