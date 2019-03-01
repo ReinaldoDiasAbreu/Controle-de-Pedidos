@@ -41,7 +41,7 @@ O projeto possui a seguinte organização de arquivos.
 * / php             -> Arquivos PHP para conecção com o banco de dados
   * / admin         -> Arquivos PHP para o administrador intermediarios com o banco de dados
 * / screenshots     -> Capturas de tela
-* /scriptSQL        -> Script de criação do banco de dados do sistema
+* / scriptSQL        -> Script de criação do banco de dados do sistema
 
 Para cada área do painel adminstrativo é feita uma pasta para acomodar os arquivos de cada função, e para a conexão com o banco de dados apara cada função também é criada outra pasta de mesmo nome na pasta PHP. Como por exemplo a pasta admin, com os arquivos de formulários das funções do painel e uma na pasta PHP para agir como intermediário ao banco de dados.
 
