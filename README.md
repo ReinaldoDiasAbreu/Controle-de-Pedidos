@@ -46,3 +46,7 @@ O projeto possui a seguinte organização de arquivos.
 Para cada área do painel adminstrativo é feita uma pasta para acomodar os arquivos de cada função, e para a conexão com o banco de dados apara cada função também é criada outra pasta de mesmo nome na pasta PHP. Como por exemplo a pasta admin, com os arquivos de formulários das funções do painel e uma na pasta PHP para agir como intermediário ao banco de dados.
 
 ---
+
+### - Diário de Bordo
+
+---
