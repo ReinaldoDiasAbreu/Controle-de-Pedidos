@@ -71,7 +71,7 @@ if(empty($_SESSION['nome'])) {
 						<div class="grid-x">
 							<div class="cell small-12  medium-6 large-6" >
 								<div class="cell small-4  medium-4 large-4" >
-									<p><a href="#" class="button">Cadastrar Cliente</a>
+									<p><a href="client/cadastro_client.php" class="button">Cadastrar Cliente</a>
 									<a href="#" class="button">Buscar Cliente</a></p>
 								</div>
 								<div class="cell small-4  medium-4 large-4">
