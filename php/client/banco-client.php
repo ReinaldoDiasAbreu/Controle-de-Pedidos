@@ -124,4 +124,50 @@ function remover_client($id)
    }
 }
 
+function validacao_cpf($cpf)
+{
+	$cont = 0;
+	for ($b=0; $b < 11 ; $b++) { 
+		if($cpf[$b] == $cpf[$b+1])
+			$cont++;
+	}
+	if($cont != 10)
+	{
+		$aux = 0;
+		for ($i=10, $a=0; $i <= 2, $a<=8; $i--, $a++) { 
+			$aux += $cpf[$a] * $i;
+		}
+		$aux = ($aux * 10) % 11;
+
+		if($aux == $cpf[9])
+		{
+			$aux = 0;
+			for ($i=11, $a=0; $i <= 2, $a<=9; $i--, $a++) { 
+				$aux += $cpf[$a] * $i;
+			}
+			$aux = ($aux * 10) % 11;
+			
+			if($aux == $cpf[10])
+			{
+				return true;
+			}	
+			else
+			{
+				return false;
+			}
+		}
+		else
+		{
+			return false;
+		}
+	}
+	else
+	{
+		return false;
+	}
+	
+	
+
+}
+
 ?>

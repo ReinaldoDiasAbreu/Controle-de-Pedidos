@@ -24,18 +24,29 @@
 
 			$dados = array('cpf' => $cpf, 'nome' => $nome, 'email' => $email, 'numero' => $numero, 'bairro' => $bairro, 'rua' => $rua, 'telefone' => $telefone);
 
-			$status = cadastro_cliente($dados);
-			
-			if($status)
+			$cpfvar = str_replace(".","", $cpf);
+			$cpfvar = str_replace("-","", $cpfvar);
+
+			if(validacao_cpf($cpfvar))
 			{
-				echo "<script language=javascript>alert( 'Cadastro Realizado com Sucesso!' );</script>";
-				echo "<script language=javascript>window.location.replace('../../client/cadastro_client.php');</script>";
+				$status = cadastro_cliente($dados);
+			
+				if($status)
+				{
+					echo "<script language=javascript>alert( 'Cadastro Realizado com Sucesso!' );</script>";
+					echo "<script language=javascript>window.location.replace('../../client/cadastro_client.php');</script>";
+				}
+				else
+				{
+					echo "<script language=javascript>alert( 'Erro ao realizar cadastro! Verifique se já está cadastrado!' );</script>";
+					echo "<script language=javascript>window.location.replace('../../client/cadastro_client.php');</script>";
+
+				}
 			}
 			else
 			{
-				echo "<script language=javascript>alert( 'Erro ao realizar cadastro! Verifique se já está cadastrado!' );</script>";
-				echo "<script language=javascript>window.location.replace('../../client/cadastro_client.php');</script>";
-
+				echo "<script language=javascript>alert( 'Erro ao realizar cadastro! CPF inválido!!!' );</script>";
+					echo "<script language=javascript>window.location.replace('../../client/cadastro_client.php');</script>";
 			}
 
 	}

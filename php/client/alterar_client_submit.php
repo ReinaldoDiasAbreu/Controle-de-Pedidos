@@ -29,18 +29,30 @@
 
 			$dados = array('id' => $id, 'cpf' => $cpf, 'nome' => $nome, 'email' => $email, 'numero' => $numero, 'bairro' => $bairro, 'rua' => $rua, 'telefone' => $telefone);
 
-			$status = atualizar_cadastro_client($dados);
-			
-			if($status)
+			$cpfvar = str_replace(".","", $cpf);
+			$cpfvar = str_replace("-","", $cpfvar);
+
+			if(validacao_cpf($cpfvar))
 			{
-				echo "<script language=javascript>alert( 'Atualização Realizado com Sucesso!' );</script>";
-				echo "<script language=javascript>window.location.replace('../../client/alterar_client.php');</script>";
+
+				$status = atualizar_cadastro_client($dados);
+				
+				if($status)
+				{
+					echo "<script language=javascript>alert( 'Atualização Realizado com Sucesso!' );</script>";
+					echo "<script language=javascript>window.location.replace('../../client/alterar_client.php');</script>";
+				}
+				else
+				{
+					echo "<script language=javascript>alert( 'Erro ao realizar Atualização!' );</script>";
+					echo "<script language=javascript>window.location.replace('../../client/alterar_client.php');</script>";
+
+				}
 			}
 			else
 			{
-				echo "<script language=javascript>alert( 'Erro ao realizar Atualização!' );</script>";
-				echo "<script language=javascript>window.location.replace('../../client/alterar_client.php');</script>";
-
+				echo "<script language=javascript>alert( 'Erro ao realizar Atualização! CPF inválido!!!' );</script>";
+					echo "<script language=javascript>window.location.replace('../../client/alterar_client.php');</script>";
 			}
 
 	}
