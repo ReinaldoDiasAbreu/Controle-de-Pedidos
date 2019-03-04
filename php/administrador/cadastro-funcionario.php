@@ -22,6 +22,7 @@
 			$cargo = isset($_POST['cargo'])?$_POST['cargo']:"0";
 
 			$nome = trim(strtolower($nome));
+			$senha = criptografar($senha);
 
 			$dados = array('email' => $email, 'nome' => $nome,'senha' => $senha, 'cargo' => $cargo);
 			

@@ -147,4 +147,10 @@ function imprime_user_nome($nome)					# Retorna linhas dos usuários que coincid
    }
 }
 
+function criptografar($string)
+{
+	return md5($string);
+}
+
+
 ?>

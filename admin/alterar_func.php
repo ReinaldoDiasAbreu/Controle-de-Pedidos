@@ -45,11 +45,11 @@ if (!isset($_SESSION["nome"]) && !isset($_SESSION["cargo"])) {
     <div class="grid-container">
       
             <div class="grid-x" id="cabecalho">
-                <div class="cell small-12  medium-9 large-9" id="title">
+                <div class="cell small-12  medium-8 large-8" id="title">
                   <img src="../img/icons/painel.png" >
                   <h1>Painel de Controle</h1>
                 </div>
-                <div class="cell small-12 medium-3 large-3">
+                <div class="cell auto">
                   <div id="usuario">
                     <?php
                     $nome = $_SESSION['nome'];

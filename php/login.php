@@ -10,7 +10,7 @@
 
 	$email = isset($_POST["email"])?$_POST["email"]:"[Email Invalido]";
 	$senha = isset($_POST["senha"])?$_POST["senha"]:"[Senha Invalida]";
-
+	$senha = criptografar($senha);
 	$return = verifica_acesso($email,$senha);
 
 	if($return)
