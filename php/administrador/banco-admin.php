@@ -2,6 +2,9 @@
 
 include '../banco-acesso.php';
 
+/*
+	Funções relativas a acesso ao banco de dados pelo painel na seção do adminstrador.
+*/
 
 function verifica_acesso($email, $senha) 			# Verifica login do usuário e retorna seus dados
 {
@@ -143,7 +146,5 @@ function imprime_user_nome($nome)					# Retorna linhas dos usuários que coincid
        return NULL;
    }
 }
-
-
 
 ?>

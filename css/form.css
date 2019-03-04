@@ -51,3 +51,6 @@ form.form-cad legend{
 	padding: 5px;
 
 }
+input#input-tam{
+	width: 90%;
+}
