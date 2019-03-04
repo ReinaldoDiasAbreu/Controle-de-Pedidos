@@ -105,7 +105,7 @@ function verifica_existe($email)					# Verifica se o usuário existe pelo email
 function atualizar_cadastro_user($dados)			# Atualiza o cadastro passando os dados do user/admin
 {
 	try{
-
+		
 		$PDO = conectar();
 		$sql = "UPDATE admin SET nome=:nome, email=:email, senha=:senha, cargo=:cargo WHERE id=:id";
 		$exec = $PDO->prepare($sql)->execute($dados);

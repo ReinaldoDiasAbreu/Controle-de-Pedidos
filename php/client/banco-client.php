@@ -90,5 +90,24 @@ function listar_tabela_client()
    }
 }
 
+function atualizar_cadastro_client($dados)
+{
+	try{
 
+		$PDO = conectar();
+		$sql = "UPDATE cliente SET cpf=:cpf, nome=:nome, email=:email, num=:numero, bairro=:bairro, rua=:rua, telefone=:telefone WHERE id=:id";
+
+		$exec = $PDO->prepare($sql)->execute($dados);
+
+		if($exec)
+			return true;
+		else
+			return false;
+	
+   }catch(PDOException $i){
+       echo $i->getMessage();
+       return false;
+   }
+	
+}
 ?>

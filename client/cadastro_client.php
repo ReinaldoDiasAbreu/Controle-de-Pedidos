@@ -53,9 +53,9 @@ if(empty($_SESSION['nome'])) {
                      <p>Email: <input type="email" name="email" maxlength="40"></p>
                      <p>Telefone: <input type="text" name="telefone" maxlength="15" onkeydown="javascript: fMasc( this, mTel );"> </p>
                      <fieldset><legend id="legenda">Endereço:</legend>
-                      <p> Nº: <input type="number" name="numero" min="0" max="999999" id="input-tam"></p>
-                      <p> Rua: <input type="text" name="rua" maxlength="20" id="input-tam"></p>
-                      <p> Bairro: <input type="text" name="bairro" maxlength="20" id="input-tam"></p><br/>
+                      <p> Nº: <input type="number" name="numero" min="0" max="999999" class="input-tam"></p>
+                      <p> Rua: <input type="text" name="rua" maxlength="20" class="input-tam"></p>
+                      <p> Bairro: <input type="text" name="bairro" maxlength="20" class="input-tam"></p><br/>
                      </fieldset>
 
                      <input type="submit" name="btn" class="button" id="btn-cad" value="Cadastrar">

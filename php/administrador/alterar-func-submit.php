@@ -36,7 +36,7 @@
 			}
 			else
 			{
-				echo "<script language=javascript>alert( 'Erro ao realizar cadastro! Verifique se já está cadastrado!' );</script>";
+				echo "<script language=javascript>alert( 'Erro ao realizar Atualização!' );</script>";
 				echo "<script language=javascript>window.location.replace('../../admin/alterar_func.php');</script>";
 
 			}
