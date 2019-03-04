@@ -108,6 +108,20 @@ function atualizar_cadastro_client($dados)
        echo $i->getMessage();
        return false;
    }
-	
 }
+
+function remover_client($id)
+{
+	try{
+		$PDO = conectar();
+		$sql = "DELETE FROM cliente WHERE id = :id";
+		$exec = $PDO->prepare($sql);
+		$exec->bindParam( ':id', $id );
+		$exec->execute();
+
+   }catch(PDOException $i){
+       echo $i->getMessage();
+   }
+}
+
 ?>

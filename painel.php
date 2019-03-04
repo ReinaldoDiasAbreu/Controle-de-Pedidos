@@ -76,7 +76,7 @@ if(empty($_SESSION['nome'])) {
 								</div>
 								<div class="cell small-4  medium-4 large-4">
 									<p><a href="client/alterar_client.php" class="button">Alterar Dados</a>
-									<a href="#" class="button">Remover Cadastro</a></p>
+									<a href="client/remover_client.php" class="button">Remover Cadastro</a></p>
 								</div>
 							</div>
 							<div class="hide-for-small-only" class="cell medium-6 large-6" >
