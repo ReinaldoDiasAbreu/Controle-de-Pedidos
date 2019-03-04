@@ -47,9 +47,14 @@ if(empty($_SESSION['nome'])) {
                   <a href="../painel.php" class="alert button" id="btn-voltar" >VOLTAR</a>
                   <h2 class="form-cad">Remover Funcionários</h2>
 					   <div>
-						    <form action='../php/admin/remover-func-submit.php' method='post' class="form-select">
+						    <form action='../php/administrador/remover-func-submit.php' method='post' class="form-select">
         						<?php
-          							include "../php/banco.php";
+          							try {
+                            include ('../php/banco-acesso.php');
+                            include ('../php/administrador/banco-admin.php');
+                          } catch (Exception $e) {
+                            echo "Erro: ".$e->getMessage();
+                          }
           							if($_SESSION['cargo'] == 1)
           							{
           								echo "<table><tr style='text-align: center; font-weight: bolder; font-family: Arial'><td></td><td>Codigo</td><td>Nome</td><td>Cargo</td></tr>";

@@ -1,26 +1,7 @@
 <?php
 
-function conectar()									# Função para conecção ao banco de dados com PDO
-{
-	define( 'MYSQL_HOST', 'localhost' );
-	define( 'MYSQL_USER', 'admin' );
-	define( 'MYSQL_PASSWORD', 'password' );
-	define( 'MYSQL_DB_NAME', 'pizzaria' );
-	define('BD', 'mysql');
+include '../banco-acesso.php';
 
-	try
-	{
-	    $PDO = new PDO( BD.':host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD );
-	    $PDO -> setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-	    return $PDO;
-	}
-	catch ( PDOException $e )
-	{
-	    echo 'Erro ao conectar com o MySQL: '. $e->getMessage();
-	    return NULL;
-	}
-
-}
 
 function verifica_acesso($email, $senha) 			# Verifica login do usuário e retorna seus dados
 {
@@ -72,14 +53,13 @@ function listar_tabela_func()						# Retorna todas as linhas a tabela admin por 
 	try{
 		$PDO = conectar();
 		$sql = "SELECT id, nome, cargo, email FROM admin ORDER BY nome";
-		
-		$cont = $PDO->prepare($sql);
-		$cont->execute();
- 
-		return $rows = $cont->fetchAll( PDO::FETCH_ASSOC );
+	
+		$result = $PDO->query( $sql );
+		$rows = $result->fetchAll( PDO::FETCH_ASSOC );
+		return $rows;
 
    }catch(PDOException $i){
-       echo $i->getMessage();
+       echo "Erro: ".$i->getMessage();
        return NULL;
    }
 
@@ -132,7 +112,6 @@ function atualizar_cadastro_user($dados)			# Atualiza o cadastro passando os dad
 		else
 			return false;
 	
-
    }catch(PDOException $i){
        echo $i->getMessage();
        return false;
@@ -163,7 +142,8 @@ function imprime_user_nome($nome)					# Retorna linhas dos usuários que coincid
        echo $i->getMessage();
        return NULL;
    }
-	
 }
+
+
 
 ?>

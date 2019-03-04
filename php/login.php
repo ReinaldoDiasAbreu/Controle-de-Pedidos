@@ -5,7 +5,8 @@
 </head>
 <body>
 <?php
-	include "banco.php";
+	include "banco-acesso.php";
+	include "administrador/banco-admin.php";
 
 	$email = isset($_POST["email"])?$_POST["email"]:"[Email Invalido]";
 	$senha = isset($_POST["senha"])?$_POST["senha"]:"[Senha Invalida]";

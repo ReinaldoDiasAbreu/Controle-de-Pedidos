@@ -46,7 +46,7 @@ if(empty($_SESSION['nome'])) {
                 <div class="cell small-12 medium-6 large-6">
                   <a href="../painel.php" class="alert button" id="btn-voltar" >VOLTAR</a>
                   <h2 class="form-cad">Cadastro de Funcionário</h2>
-                    <form method="post" action="../php/admin/cadastro-funcionario.php" class="form-cad">
+                    <form method="post" action="../php/administrador/cadastro-funcionario.php" class="form-cad">
                      <p> Nome: <input type="text" name="nome" maxlength="50"></p><br/>
                      <p>Email: <input type="email" name="email" maxlength="30"></p><br/>
                      <p>Senha: <input type="password" name="senha" maxlength="15"></p><br/>

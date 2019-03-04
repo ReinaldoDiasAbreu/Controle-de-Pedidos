@@ -61,26 +61,29 @@ if(empty($_SESSION['nome'])) {
           <div class="grid-x">
             <div class="cell auto"></div>
             <div class="cell small-12 medium-8 large-9">
-              <table>   
+             <table>   
               <tr style='text-align: center; font-weight: bolder; font-family: Arial'>
                 <td>Código</td>
                 <td>Nome</td>
                 <td>Cargo</td>
                 <td>Email</td>
-              </tr>          
-              <?php
-                include "../php/banco.php";
-                $nome = isset($_POST['busca'])?$_POST['busca']:false;
+              </tr>
 
-                if($_POST['busca'])
-                {
-                  $result = imprime_user_nome(strtolower($nome));
-                }
-                else
-                {
-                  $result = listar_tabela_func();
+              <?php
+                
+                try {
+                  include ('../php/banco-acesso.php');
+                  include ('../php/administrador/banco-admin.php');
+                } catch (Exception $e) {
+                  echo "Erro: ".$i->getMessage();
                 }
                 
+                if(isset($_POST['busca'])){
+                  $result = imprime_user_nome(strtolower($_POST['busca']));
+                }
+                else
+                  $result = listar_tabela_func();
+                                
                 if($result)
                 {
                     foreach ($result as $key => $value) {
@@ -106,8 +109,9 @@ if(empty($_SESSION['nome'])) {
                       echo "</tr>";
                     }
                 }
+                
               ?>
-               </table>
+             </table>
           </div>
           <div class="cell auto"></div>
           </div>

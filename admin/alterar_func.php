@@ -77,7 +77,13 @@ if (!isset($_SESSION["nome"]) && !isset($_SESSION["cargo"])) {
                    <div>
                         <form >
                           <?php
-                              include "../php/banco.php";
+                              try {
+                                include ('../php/banco-acesso.php');
+                                include ('../php/administrador/banco-admin.php');
+                              } catch (Exception $e) {
+                                echo "Erro: ".$i->getMessage();
+                              }
+
                               if($_SESSION['cargo'] == 1)
                               {
                                 echo "<table><tr style='text-align: center; font-weight: bolder; font-family: Arial'><td></td><td>Codigo</td><td>Nome</td><td>Cargo</td></tr>";
@@ -112,7 +118,7 @@ if (!isset($_SESSION["nome"]) && !isset($_SESSION["cargo"])) {
                 </div>
                 <div class="cell auto"></div>
                <div class="cell small-12 medium-5 large-5"  id="form-select">
-                    <form method="post" action="../php/admin/alterar-func-submit.php" class="form-cad">
+                    <form method="post" action="../php/administrador/alterar-func-submit.php" class="form-cad">
                      <p>Código: <input type="number" name="id" id="iduser" readonly="readonly"></p>
                      <p> Nome: <input type="text" name="nome" id="nomeuser" maxlength="50"></p><br/>
                      <p>Email: <input type="email" name="email" id="emailuser" maxlength="30"></p><br/>

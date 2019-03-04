@@ -4,11 +4,18 @@
 	<meta charset="utf-8"/>
 </head>
 <body>
+
 <?php
-	include "../banco.php";
 	session_start();
 
-	if(empty($_SESSION['nome'])) {
+	try {
+	    include_once ('banco-admin.php');
+		include_once ('../banco-acesso.php');
+	  } catch (Exception $e) {
+	    echo "Erro: ".$e->getMessage();
+	  }
+	
+	if(!isset($_SESSION['nome'])) {
 	    echo "<script language=javascript>alert( 'Acesso Bloqueado!' );</script>";
 	    echo "<script language=javascript>window.location.replace('../../index.html');</script>";
 	}
@@ -50,7 +57,6 @@
 			{
 				echo "<script language=javascript>alert( 'Ação não concluída! Deve existir ao menos um administrador no sistema.' );</script>";
 	        	echo "<script language=javascript>window.location.replace('../../admin/remover_func.php');</script>";
-			
 				
 			}
 			else
