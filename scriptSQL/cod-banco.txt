@@ -27,3 +27,19 @@ create table cliente(
 	telefone varchar(15) NOT NULL,
 	PRIMARY KEY (id)
 ) default charset = utf8;
+
+create table ingrediente(
+	id int NOT NULL AUTO_INCREMENT,
+	nome varchar(30) NOT NULL,
+	quantidade int NOT NULL,
+	unidade int NOT NULL,
+	PRIMARY KEY (id)
+) default charset = utf8;
+
+create table estoque(
+	id int NOT NULL AUTO_INCREMENT,
+	nome varchar(30) NOT NULL,
+	preco varchar(10) NOT NULL,
+	ingredientes varchar(100) NOT NULL,
+	PRIMARY KEY (id)
+) default charset = utf8;

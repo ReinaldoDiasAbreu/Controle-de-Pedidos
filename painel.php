@@ -15,6 +15,20 @@ if(empty($_SESSION['nome'])) {
     <title>Controle de Pizzaria</title>
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/painel.css">
+		<script type="text/javascript">
+			function gopage(id)
+			{
+				if(id == 1){
+					window.location.href = ('stock/cadastrar_ingrediente.php');
+				}
+				else if(id == 2){
+					window.location.href = ('stock/atualizar_ingrediente.php');
+				}
+				else if(id == 3){
+					window.location.href = ('stock/remover_ingrediente.php');
+				}
+			}
+		</script>
   </head>
   <body class="page-painel">
     <div class="grid-container">
@@ -96,12 +110,17 @@ if(empty($_SESSION['nome'])) {
 						<div class="grid-x">
 							<div class="cell small-12  medium-6 large-6" >
 								<div class="cell small-4  medium-4 large-4" >
-									<p><a href="#" class="button">Adicionar Produto</a>
-									<a href="#" class="button">Buscar Produto</a></p>
+									<p><a href="stock/cadastrar_produto.php" class="button">Adicionar Produto</a>
+									<p><a href="#" class="button">Atualizar Produto</a>
 								</div>
 								<div class="cell small-4  medium-4 large-4">
-									<p><a href="#" class="button">Atualizar Produto</a>
-									<a href="#" class="button">Remover Produto</a></p>
+									<p><a href="#" class="button">Remover Produto</a></p>
+									<p><select onchange="javascript: gopage(value);">
+										 		<option value="0" checked><p class="seletor">Opções Ingredientes</p></option>
+                        <option value="1"><p class="seletor">Cadastrar Ingrediente</p></option>
+                        <option value="2"><p class="seletor">Atualizar Ingrediente</p></option>
+                        <option value="3"><p class="seletor">Remover Ingrediente</p></option>
+                     </select><p>
 								</div>
 							</div>
 							<div class="hide-for-small-only" class="cell medium-6 large-6" >

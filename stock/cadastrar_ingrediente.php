@@ -15,7 +15,6 @@ if(empty($_SESSION['nome'])) {
     <link rel="stylesheet" href="../css/foundation.css">
     <link rel="stylesheet" href="../css/painel.css">
     <link rel="stylesheet" href="../css/form.css">
-    <script src="../js/mascara.js"></script>
   </head>
   <body class="page-painel">
     <div class="grid-container">
@@ -46,15 +45,20 @@ if(empty($_SESSION['nome'])) {
                 <div class="cell auto"></div>
                 <div class="cell small-12 medium-7 large-7">
                   <a href="../painel.php" class="alert button" id="btn-voltar" >VOLTAR</a>
-                  <h2 class="form-cad">Cadastro de Produto</h2>
-                    <form method="post" action="../php/stock/cadastrar_produto_submit.php" class="form-cad">
+                  <h2 class="form-cad">Cadastro de Ingrediente</h2>
+                    <form method="post" action="../php/stock/cadastro-ingrediente-submit.php" class="form-cad">
                      <p>Nome: <input type="text" name="nome" maxlength="30"></p>
-                     <p>Preço: R$ <input type="number" name="preco" min="0"> </p>
-                     <p> Ingredientes: </p>
-                     <fieldset>
-                     </fieldset>
+                     <p>Quantidade: <input type="number" name="quantidade" min="1"> </p>
+                     <label for="unidade"> Medida: </label>
+                     <select name="unidade" id="unidade">
+                        <option value="1">Unidades</option>
+                        <option value="2">Kilos</option>
+                        <option value="3">Gramas</option>
+                        <option value="4">Litros</option>
+                        <option value="5">Mililitros</option>
+                     </select>
                      <input type="submit" name="btn" class="button" id="btn-cad" value="Cadastrar">
-
+                    
                     </form>
                 </div>
                 <div class="cell auto"></div>

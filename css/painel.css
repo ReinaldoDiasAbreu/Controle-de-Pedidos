@@ -73,3 +73,14 @@ div#cabecalho a{
 div#usuario{
 	display: inline-block;
 }
+div#conf select{
+	background-color: #1779ba;
+	color: #fefefe;
+	transition: background-color 0.25s ease-out, color 0.25s ease-out;
+	cursor: pointer;
+	padding-left: 20%;
+}
+div#conf select option p{
+	font-family: inherit;
+	font-size: 0.9rem;
+}

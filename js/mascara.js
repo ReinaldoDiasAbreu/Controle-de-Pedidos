@@ -1,5 +1,5 @@
 /*
-	Funções de Mascara do Formulário Clinte
+	Funções de Mascara do Formulário
 	Autor: LipESprY
 	Fonte: https://pt.stackoverflow.com/questions/199264/como-faco-uma-mascara-para-um-input
 */
