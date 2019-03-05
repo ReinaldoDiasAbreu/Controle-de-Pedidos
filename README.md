@@ -35,11 +35,15 @@ O projeto possui a seguinte organização de arquivos.
 * index.html
 * painel.php
 * / admin           -> Pasta referente a as funções do administrador.
+* / client          -> Pasta referente a as funções do cliente.
+* / stock           -> Pasta referente a as funções do estoque/produtos.
 * / css             -> Pasta com arquivos de estilo e fontes
 * / img             -> Imagens do projeto
 * / js              -> Arquivos JavaScript
 * / php             -> Arquivos PHP para conecção com o banco de dados
-  * / admin         -> Arquivos PHP para o administrador intermediarios com o banco de dados
+  * / admin           -> Arquivos PHP para o administrador intermediarios com o banco de dados
+  * / client          -> Arquivos PHP para o cliente intermediarios com o banco de dados
+  * / stock           -> Arquivos PHP para o estoque intermediarios com o banco de dados
 * / screenshots     -> Capturas de tela
 * / scriptSQL        -> Script de criação do banco de dados do sistema
 
