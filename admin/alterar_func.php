@@ -49,7 +49,7 @@ if (!isset($_SESSION["nome"]) && !isset($_SESSION["cargo"])) {
                   <img src="../img/icons/painel.png" >
                   <h1>Painel de Controle</h1>
                 </div>
-                <div class="cell auto">
+                <div class="cell small-12  medium-4 large-4">
                   <div id="usuario">
                     <?php
                     $nome = $_SESSION['nome'];

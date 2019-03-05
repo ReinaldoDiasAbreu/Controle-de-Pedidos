@@ -24,7 +24,7 @@ if(empty($_SESSION['nome'])) {
               		<img src="img/icons/painel.png" >
               		<h1>Painel de Controle</h1>
               	</div>
-              	<div class="cell auto">
+              	<div class="cell small-12 medium-4 large-4">
               		<div id="usuario">
               			<?php
               			$nome = $_SESSION['nome'];
@@ -54,7 +54,7 @@ if(empty($_SESSION['nome'])) {
 									<a href="#" class="button">Fazer Busca</a></p>
 								</div>
 								<div class="cell small-4  medium-4 large-4">
-									<p><a href="#" class="button">Alterar Pedido</a>
+									<p><a href="#" class="button">Atualizar Pedido</a>
 									<a href="#" class="button">Cancelar Pedido</a></p>
 								</div>
 							</div>
@@ -75,7 +75,7 @@ if(empty($_SESSION['nome'])) {
 									<a href="client/buscar_client.php" class="button">Buscar Cliente</a></p>
 								</div>
 								<div class="cell small-4  medium-4 large-4">
-									<p><a href="client/alterar_client.php" class="button">Alterar Dados</a>
+									<p><a href="client/alterar_client.php" class="button">Atualizar Cliente</a>
 									<a href="client/remover_client.php" class="button">Remover Cadastro</a></p>
 								</div>
 							</div>
@@ -100,7 +100,7 @@ if(empty($_SESSION['nome'])) {
 									<a href="#" class="button">Buscar Produto</a></p>
 								</div>
 								<div class="cell small-4  medium-4 large-4">
-									<p><a href="#" class="button">Alterar Produto</a>
+									<p><a href="#" class="button">Atualizar Produto</a>
 									<a href="#" class="button">Remover Produto</a></p>
 								</div>
 							</div>
@@ -120,7 +120,7 @@ if(empty($_SESSION['nome'])) {
 									<a href="admin/buscar_func.php" class="button">Buscar Funcionario</a></p>
 								</div>
 								<div class="cell small-4  medium-4 large-4">
-									<p><a href="admin/alterar_func.php" class="button">Alterar Cadastro</a>
+									<p><a href="admin/alterar_func.php" class="button">Atualizar Cadastro</a>
 									<a href="admin/remover_func.php" class="button">Remover Funcionário</a></p>
 								</div>
 							</div>
