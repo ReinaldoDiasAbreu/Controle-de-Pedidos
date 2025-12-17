@@ -2,6 +2,12 @@
 ### Projeto de estudo, para a criação de um sistema de controle de vendas/pedidos de uma pizzaria ou similar.
 
 ---
+
+| 🚨 **ATENÇÃO** |
+|---------------|
+| **Este repositório não deve ser usado em produção!**<br>Ele **não recebe atualizações** e foi criado **somente para fins de estudo**. E não segue nenhuma boa prática de desenvolvimento. |
+
+---
 ### - Objetivos do Projeto
 
 Desenvolver uma página online responsiva que realize o básico da gerência de um restaurante, no caso por exemplo, uma pizzaria. Utilizando das melhores tecnologias para alcançar esse objetivo.
